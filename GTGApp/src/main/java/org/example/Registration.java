@@ -4,18 +4,17 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Registration implements ActionListener {
+public class Registration extends JFrame implements ActionListener {
     public Registration() {
         JPanel panel = new JPanel();
-        JFrame frame = new JFrame();
-        frame.setSize(350, 250);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.add(panel);
-        frame.setTitle("App Registration");
+        this.setSize(350, 250);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.add(panel);
+        this.setTitle("App Registration");
         panel.setLayout(null);
 
         JMenuBar jmb = new JMenuBar();
-        frame.setJMenuBar(jmb);
+        this.setJMenuBar(jmb);
 
         JMenu registrationform = new JMenu("Registration Form");
         jmb.add(registrationform);
@@ -28,9 +27,6 @@ public class Registration implements ActionListener {
         jmb.add(edit);
         JMenuItem save = new JMenuItem("Save");
         edit.add(save);
-
-
-
 
         JLabel userlabel = new JLabel("Name:");
         userlabel.setBounds(10, 20, 80, 25);
@@ -69,7 +65,7 @@ public class Registration implements ActionListener {
         button.addActionListener(this);
         panel.add(button);
 
-        frame.setVisible(true);
+        this.setVisible(true);
     }
 
     @Override
@@ -77,9 +73,7 @@ public class Registration implements ActionListener {
         System.out.println("Client Registered");
     }
 
-    public void setDefaultCloseOperation(int disposeOnClose) {
-    }
-
-    public void setVisible(boolean b) {
+    public static void main(String[] args) {
+        new Registration();
     }
 }
