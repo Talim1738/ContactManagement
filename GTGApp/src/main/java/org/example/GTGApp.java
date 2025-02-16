@@ -1,6 +1,7 @@
 package org.example;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,6 +12,10 @@ public class GTGApp {
         jf.setSize(300, 250);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        JPanel panel = new JPanel();
+        panel.setBackground(Color.PINK);
+
+        jf.add(panel);
         JMenuBar jmb = new JMenuBar();
         jf.setJMenuBar(jmb);
 
